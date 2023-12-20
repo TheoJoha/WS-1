@@ -1,6 +1,6 @@
 const socket = io("ws://localhost:3500")
 
-const msgInput = document.querySelector("input")
+const msgInput = document.querySelector("#message")
 const nameInput = document.querySelector("#name")
 const chatRoom = document.querySelector("#room")
 const activity = document.querySelector(".activity")
@@ -59,8 +59,6 @@ socket.on("message", (data) => {
 
     chatDisplay.scrollTop = chatDisplay.scrollHeight
 })
-
-
 
 let activityTimer;
 socket.on("activity", (name) => {
